@@ -26,7 +26,7 @@ matrix:
       install: echo "MAVEN_OPTS='-Xmx3000m'" > ~/.mavenrc && mvn install -q -ff -DskipTests -B
       before_script:
         - unset _JAVA_OPTIONS
-      script: echo "MAVEN_OPTS='-Xmx2500m'" > ~/.mavenrc && mvn test -B -pl processing
+      script: echo "MAVEN_OPTS='-Xmx1024m'" > ~/.mavenrc && mvn test -B -pl processing
 
       # server module test
     - sudo: false
